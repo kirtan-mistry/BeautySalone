@@ -140,9 +140,49 @@
         overflow: visible !important;
       }
     }
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      .main-container {
+        max-width: 1200px;
+        width: 95vw;
+        border-radius: 1.5rem;
+        margin: 1.5rem auto;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+      }
+      .service-section {
+        border-radius: 1.25rem;
+        margin-bottom: 1rem;
+        padding: 1rem 1rem;
+      }
+    }
+    .main-container {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 24px 0 rgba(160, 120, 80, 0.10);
+      display: flex;
+      flex-direction: column;
+      min-height: unset;
+      border-radius: 0;
+      padding: 0;
+    }
+    .service-section {
+      background: #fbeee6;
+      margin-bottom: 0.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px 0 rgba(160, 120, 80, 0.08);
+      padding: 0.5rem 0.5rem;
+    }
   </style>
 </head>
-<body <body class="flex justify-center min-h-screen p-2 sm:p-4 md:p-8 overflow-y-auto">
+<body class="flex items-center justify-center min-h-screen p-2 sm:p-4 md:p-8">
   <div class="bg-white/90 rounded-2xl sm:rounded-[2.5rem] shadow-2xl border border-[#f3e6d6] w-full max-w-full sm:max-w-2xl md:max-w-4xl flex flex-col md:flex-row overflow-hidden">
     <!-- Left: Services -->
     <div class="w-full md:w-1/2 p-4 sm:p-6 md:p-10 flex flex-col gap-6 sm:gap-8 bg-gradient-to-b from-[#fbeee6] to-[#f7d9e3]">
