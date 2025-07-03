@@ -21,6 +21,8 @@
     @media (max-width: 768px) {
       body {
         padding: 0.5rem;
+        overflow-y: auto !important;
+        min-height: 100vh !important;
       }
       .bg-white\/90, .bg-white\/80, .bg-white\/70 {
         background: #fff !important;
@@ -128,6 +130,15 @@
         font-size: 1.1rem !important;
         border-radius: 0.75rem !important;
       }
+      .bg-white\/90.rounded-2xl.sm\:rounded-\[2\.5rem\].shadow-2xl.border.border-\[\#f3e6d6\].w-full.max-w-full.sm\:max-w-2xl.md\:max-w-4xl.flex.flex-col.md\:flex-row.overflow-hidden {
+        overflow-y: auto !important;
+        min-height: 100vh !important;
+        height: auto !important;
+      }
+      /* Remove any overflow: hidden or height: 100vh on mobile */
+      .overflow-hidden {
+        overflow: visible !important;
+      }
     }
   </style>
 </head>
@@ -142,23 +153,18 @@
         <ul class="space-y-1 sm:space-y-2">
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Clean Up</span>
-            <span class="font-semibold text-[#e7a7b7]">₹200</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>SHEANAZ GOLD</span>
-            <span class="font-semibold text-[#e7a7b7]">₹500</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>SHEANAZ DIAMOND</span>
-            <span class="font-semibold text-[#e7a7b7]">₹600</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>LOTUS GOLD</span>
-            <span class="font-semibold text-[#e7a7b7]">₹800</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>FRUIT FACIAL</span>
-            <span class="font-semibold text-[#e7a7b7]">₹300</span>
           </li>
         </ul>
       </div>
@@ -168,11 +174,9 @@
         <ul class="space-y-1 sm:space-y-2">
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Manicure</span>
-            <span class="font-semibold text-[#e7a7b7]">₹400</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Pedicure</span>
-            <span class="font-semibold text-[#e7a7b7]">₹600</span>
           </li>
         </ul>
       </div>
@@ -182,18 +186,30 @@
         <ul class="space-y-1 sm:space-y-2">
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Full Hand</span>
-            <span class="font-semibold text-[#e7a7b7]">₹250</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Half Leg</span>
-            <span class="font-semibold text-[#e7a7b7]">₹500</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Full Leg</span>
-            <span class="font-semibold text-[#e7a7b7]">₹1000</span>
           </li>
         </ul>
         <p class="text-xs sm:text-xs font-medium mt-2 text-[#b48b7d] italic">Bead wax is also available</p>
+      </div>
+      <!-- Mehndi -->
+      <div class="bg-white/80 rounded-xl sm:rounded-2xl shadow-sm border border-[#f3e6d6] p-3 sm:p-5 mb-2">
+        <h2 class="font-semibold text-base sm:text-lg text-[#c08e7b] mb-2 sm:mb-3 tracking-wide">Mehndi</h2>
+        <ul class="space-y-1 sm:space-y-2">
+          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
+            <span>Arabic Mehndi</span>
+          </li>
+          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
+            <span>Indi Western Mehndi</span>
+          </li>
+          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
+            <span>Sider Mehndi</span>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- Right: Wax, Images, Info -->
@@ -204,31 +220,24 @@
         <ul class="space-y-1 sm:space-y-2">
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Face Wax</span>
-            <span class="font-semibold text-[#e7a7b7]">₹200</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Full Hand</span>
-            <span class="font-semibold text-[#e7a7b7]">₹150</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Full Leg</span>
-            <span class="font-semibold text-[#e7a7b7]">₹600</span>
           </li>
           <li class="flex justify-between items-center italic text-[#7d5a4e] text-sm sm:text-base">
             <span>Half Leg</span>
-            <span class="font-semibold text-[#e7a7b7]">₹150</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Bleach</span>
-            <span class="font-semibold text-[#e7a7b7]">₹200</span>
           </li>
           <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
             <span>Arms Bleach</span>
-            <span class="font-semibold text-[#e7a7b7]">₹250</span>
           </li>
           <li class="flex justify-between items-center italic text-[#7d5a4e] text-sm sm:text-base">
             <span>Leg Bleach</span>
-            <span class="font-semibold text-[#e7a7b7]">₹500</span>
           </li>
         </ul>
       </div>
