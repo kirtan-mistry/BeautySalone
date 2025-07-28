@@ -1,325 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Beauty Salon & SPA</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Quicksand', Arial, sans-serif;
-      background: linear-gradient(135deg, #fbeee6 0%, #f7d9e3 100%);
-      min-height: 100vh;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top-Rated Beauty & Spa Services at Home </title>
+    <meta name="description" content="Expert at-home beauty, spa, facial, waxing, and bridal mehndi services . Book your professional appointment online today for a relaxing experience.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-bg': '#FAF9F6',
+                        'brand-surface': '#FFFFFF',
+                        'brand-text': '#36454F',
+                        'brand-accent': '#D4AF37',
+                        'brand-accent-hover': '#C39B2B',
+                        'brand-secondary-bg': '#fbeee6',
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { padding-top: 80px; } /* Offset for fixed navbar */
+        ::selection { background-color: #D4AF37; color: #FFFFFF; }
+
+        /* Styles for Modals (Popups) */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-active {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .gallery-filter-button.active {
+            background-color: #D4AF37;
+            color: white;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Beauty Salone & SPA",
+      "image": "https://images.unsplash.com/photo-1599351431202-182279189b6b?q=80&w=1965&auto=format&fit=crop",
+      "@id": "",
+      "url": "https://kirtan-mistry.github.io/BeautySalone/",
+      "telephone": "+91-7405006053",
+      "description": "Professional at-home beauty, spa, and mehndi services .",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A,806, Kuber Heights, Opp. Rashi Icon",
+        "addressLocality": "Navsari",
+        "postalCode": "390001",
+        "addressRegion": "GJ",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.3072,
+        "longitude": 73.1812
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/your-profile",
+        "https://www.instagram.com/your-profile"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "25"
+      }
     }
-    h1, h2 {
-      font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
-    }
-    ::selection {
-      background: #f7d9e3;
-    }
-    .hover-scale:hover {
-      transform: scale(1.02);
-      transition: transform 0.3s ease;
-    }
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-  </style>
+    </script>
 </head>
-<body class="flex justify-center min-h-screen p-2 sm:p-4 md:p-8 overflow-y-auto">
-  <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Beauty Salon &amp; SPA</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Quicksand', Arial, sans-serif;
-      background: linear-gradient(135deg, #fbeee6 0%, #f7d9e3 100%);
-      min-height: 100vh;
-    }
-    h1, h2 {
-      font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
-    }
-    ::selection {
-      background: #f7d9e3;
-    }
-    /* Responsive mobile/tablet styles (do not affect desktop) */
-    @media (max-width: 768px) {
-      body {
-        padding: 0.5rem;
-        overflow-y: auto !important;
-        min-height: 100vh !important;
-      }
-      .bg-white\/90, .bg-white\/80, .bg-white\/70 {
-        background: #fff !important;
-      }
-      .md\:flex-row {
-        flex-direction: column !important;
-      }
-      .w-full.md\:w-1\/2 {
-        width: 90% !important;
-        margin: 0 auto 1.5rem auto !important;
-        padding: 1.25rem 0.75rem !important;
-      }
-      .w-full.md\:w-1\/2:last-child {
-        margin-bottom: 0 !important;
-      }
-      .rounded-2xl, .sm\:rounded-\[2\.5rem\], .rounded-xl, .sm\:rounded-none {
-        border-radius: 1.25rem !important;
-      }
-      .shadow-2xl, .shadow-lg, .shadow-sm {
-        box-shadow: 0 4px 24px 0 rgba(160, 120, 80, 0.10) !important;
-      }
-      h1 {
-        font-size: 2rem !important;
-        text-align: center !important;
-        margin-bottom: 1.25rem !important;
-      }
-      h2 {
-        font-size: 1.25rem !important;
-        margin-bottom: 0.75rem !important;
-      }
-      ul, .space-y-1, .space-y-2 {
-        gap: 0.5rem !important;
-      }
-      .font-semibold.text-\[#e7a7b7\], .font-semibold.text-\[#a67c52\] {
-        font-size: 1.1rem !important;
-      }
-      .flex.justify-between.items-center {
-        font-size: 1.05rem !important;
-      }
-      .bg-gradient-to-b {
-        background: #fbeee6 !important;
-      }
-      .bg-gradient-to-b.from-\[\#f7d9e3\].to-\[\#fbeee6\] {
-        background: #f7e6ee !important;
-      }
-      /* Section pastel backgrounds */
-      .service-section {
-        background: #fbeee6;
-        margin-bottom: 1.25rem;
-        border-radius: 1.25rem;
-        box-shadow: 0 4px 24px 0 rgba(160, 120, 80, 0.10);
-        padding: 1.25rem 0.75rem;
-      }
-      .service-section:nth-child(2) { background: #f7e6ee; }
-      .service-section:nth-child(3) { background: #e6f7f2; }
-      .service-section:nth-child(4) { background: #f7f3e6; }
-      /* Section divider */
-      .section-divider {
-        height: 2px;
-        width: 80%;
-        background: linear-gradient(90deg, #f7d9e3 0%, #fbeee6 100%);
-        border-radius: 1px;
-        opacity: 0.5;
-        margin: 1.5rem auto;
-      }
-      /* Image gallery */
-      .grid.grid-cols-2 {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 0.75rem !important;
-        width: 90% !important;
-        margin: 0 auto 1.5rem auto !important;
-        padding: 0.75rem 0.5rem !important;
-        background: #fff !important;
-        border-radius: 1.25rem !important;
-      }
-      .grid.grid-cols-2 img {
-        width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 1/1 !important;
-        object-fit: cover !important;
-        border-radius: 1rem !important;
-        box-shadow: 0 2px 8px 0 rgba(160, 120, 80, 0.10);
-      }
-      /* Info card */
-      .mt-2.text-xs, .mt-2.text-xs.sm\:text-sm {
-        margin-top: 1.5rem !important;
-        width: 90% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        border-radius: 1.25rem !important;
-        box-shadow: 0 4px 24px 0 rgba(160, 120, 80, 0.10) !important;
-        padding: 1.25rem 0.75rem !important;
-        text-align: center !important;
-      }
-      /* Prevent overflow */
-      html, body, .w-full, .max-w-full, .sm\:max-w-2xl, .md\:max-w-4xl {
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-      }
-      /* Finger-friendly buttons (if any) */
-      button, .tappable {
-        min-height: 44px !important;
-        padding: 0.75rem 1.25rem !important;
-        font-size: 1.1rem !important;
-        border-radius: 0.75rem !important;
-      }
-      .bg-white\/90.rounded-2xl.sm\:rounded-\[2\.5rem\].shadow-2xl.border.border-\[\#f3e6d6\].w-full.max-w-full.sm\:max-w-2xl.md\:max-w-4xl.flex.flex-col.md\:flex-row.overflow-hidden {
-        overflow-y: auto !important;
-        min-height: 100vh !important;
-        height: auto !important;
-      }
-      /* Remove any overflow: hidden or height: 100vh on mobile */
-      .overflow-hidden {
-        overflow: visible !important;
-      }
-    }
-  </style>
-</head>
-<body class="flex items-center justify-center min-h-screen p-2 sm:p-4 md:p-8">
-  <div class="bg-white/90 rounded-none sm:rounded-none shadow-2xl border border-[#f3e6d6] w-full max-w-full sm:max-w-2xl md:max-w-4xl flex flex-col md:flex-row overflow-hidden">
-    <!-- Left: Services -->
-    <div class="w-full md:w-1/2 p-4 sm:p-6 md:p-10 flex flex-col gap-6 sm:gap-8 bg-gradient-to-b from-[#fbeee6] to-[#f7d9e3]">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#a67c52] mb-2 tracking-wide text-center md:text-left leading-tight">Beauty Salon &amp; SPA</h1>
-      <!-- Facial -->
-      <div class="bg-white/80 rounded-none sm:rounded-none shadow-sm border border-[#f3e6d6] p-3 sm:p-5">
-        <h2 class="font-semibold text-base sm:text-lg text-[#c08e7b] mb-2 sm:mb-3 tracking-wide">Facial</h2>
-        <ul class="space-y-1 sm:space-y-2">
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Clean Up</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>SHEANAZ GOLD</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>SHEANAZ DIAMOND</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>LOTUS GOLD</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>FRUIT FACIAL</span>
-          </li>
-        </ul>
-      </div>
-      <!-- Spa -->
-      <div class="bg-white/80 rounded-none sm:rounded-none shadow-sm border border-[#f3e6d6] p-3 sm:p-5">
-        <h2 class="font-semibold text-base sm:text-lg text-[#c08e7b] mb-2 sm:mb-3 tracking-wide">Spa</h2>
-        <ul class="space-y-1 sm:space-y-2">
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Manicure</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Pedicure</span>
-          </li>
-        </ul>
-      </div>
-      <!-- Lipo Wax -->
-      <div class="bg-white/80 rounded-none sm:rounded-none shadow-sm border border-[#f3e6d6] p-3 sm:p-5">
-        <h2 class="font-semibold text-base sm:text-lg text-[#c08e7b] mb-2 sm:mb-3 tracking-wide">Lipo Wax</h2>
-        <ul class="space-y-1 sm:space-y-2">
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Full Hand</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Half Leg</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Full Leg</span>
-          </li>
-        </ul>
-        <p class="text-xs sm:text-xs font-medium mt-2 text-[#b48b7d] italic">Bead wax is also available</p>
-      </div>
-      <!-- Mehndi -->
-      <div class="bg-white/80 rounded-none sm:rounded-none shadow-sm border border-[#f3e6d6] p-3 sm:p-5 mb-2">
-        <h2 class="font-semibold text-base sm:text-lg text-[#c08e7b] mb-2 sm:mb-3 tracking-wide">Mehndi</h2>
-        <ul class="space-y-1 sm:space-y-2">
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Arabic Mehndi</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Indi Western Mehndi</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Sider Mehndi</span>
-          </li>
-        </ul>
-      </div>
+
+<body class="bg-brand-bg font-body text-brand-text antialiased">
+
+    <nav class="bg-brand-surface/95 backdrop-blur-lg shadow-md fixed top-0 left-0 right-0 z-50 h-20">
+        <div class="container mx-auto max-w-4xl flex justify-between items-center h-full px-4">
+            <a href="#" class="font-heading text-xl font-bold text-brand-text">Beauty Salone</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="text-brand-text hover:text-brand-accent transition-colors font-semibold">Services</a>
+                <a href="#gallery" class="text-brand-text hover:text-brand-accent transition-colors font-semibold">Gallery</a>
+                <a href="#testimonials" class="text-brand-text hover:text-brand-accent transition-colors font-semibold">Reviews</a>
+            </div>
+            <button onclick="openBookingModal()" class="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold rounded-lg px-5 py-2.5 transition-all duration-300">
+                Book Now
+            </button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto max-w-4xl p-4 sm:p-6 md:p-8">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-brand-text">Your Personal Beauty Oasis</h1>
+            <p class="mt-4 text-lg sm:text-xl text-brand-text/80">Professional Salon & Spa Services.</p>
+        </header>
+
+        <section id="services" class="my-16">
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-center mb-10 text-brand-accent">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-brand-surface rounded-2xl shadow-lg p-6 flex flex-col">
+                    <div class="flex items-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg><h3 class="font-heading text-2xl font-bold">Facials &amp; Skin Care</h3></div>
+                    <p class="text-brand-text/80 flex-grow">Rejuvenate your skin with our range of professional facial treatments designed to cleanse, exfoliate, and nourish.</p>
+                    <button onclick="openServiceModal('facials')" class="mt-4 text-brand-accent font-bold self-start hover:underline">Learn More &rarr;</button>
+                </div>
+                <div class="bg-brand-surface rounded-2xl shadow-lg p-6 flex flex-col">
+                    <div class="flex items-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 16.125c0-1.23-1.043-2.25-2.31-2.25s-2.31 1.02-2.31 2.25c0 1.23 1.043 2.25 2.31 2.25s2.31-1.02 2.31-2.25zM19.5 16.125v-3.375c0-1.23-1.043-2.25-2.31-2.25s-2.31 1.02-2.31 2.25v3.375m-6.323-10.452L6.323 5.673a2.25 2.25 0 00-3.182 0l-1.131 1.132a2.25 2.25 0 000 3.182l6.364 6.364a2.25 2.25 0 003.182 0l1.131-1.132a2.25 2.25 0 000-3.182zM15 9.375a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg><h3 class="font-heading text-2xl font-bold">Waxing</h3></div>
+                    <p class="text-brand-text/80 flex-grow">Achieve smooth, hair-free skin with our gentle and effective waxing services for all areas.</p>
+                    <button onclick="openServiceModal('waxing')" class="mt-4 text-brand-accent font-bold self-start hover:underline">Learn More &rarr;</button>
+                </div>
+                </div>
+        </section>
+
+        <section id="gallery" class="my-16">
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-center mb-4 text-brand-accent">Our Work</h2>
+            <div id="filter-buttons" class="flex justify-center flex-wrap gap-2 mb-8">
+                <button class="gallery-filter-button active px-4 py-2 text-sm font-semibold rounded-full border border-brand-accent/50 transition" data-filter="all">All</button>
+                <button class="gallery-filter-button px-4 py-2 text-sm font-semibold rounded-full border border-brand-accent/50 transition" data-filter="hair">Hair</button>
+                <button class="gallery-filter-button px-4 py-2 text-sm font-semibold rounded-full border border-brand-accent/50 transition" data-filter="nails">Nails</button>
+                <button class="gallery-filter-button px-4 py-2 text-sm font-semibold rounded-full border border-brand-accent/50 transition" data-filter="mehndi">Mehndi</button>
+            </div>
+            <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="gallery-item" data-category="hair"><img loading="lazy" src="https://www.bls.gov/opub/btn/volume-11/images/recovering-from-the-pandemic-personal-care-services-cover.jpg" alt="Stylist performing a hair treatment" class="cursor-pointer rounded-lg shadow-md aspect-square object-cover w-full h-full transition-transform duration-300 hover:scale-105"></div>
+                <div class="gallery-item" data-category="nails"><img loading="lazy" src="https://imgs.search.brave.com/FLLGzhuYWZu7A-ErDlWRY65a8vTawHvrdINprnOOztw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFOYThMc2hBbUwu/anBn" alt="Flawless manicure with neutral pink polish" class="cursor-pointer rounded-lg shadow-md aspect-square object-cover w-full h-full transition-transform duration-300 hover:scale-105"></div>
+                <div class="gallery-item" data-category="mehndi"><img loading="lazy" src="https://imgs.search.brave.com/rKWK80e24bSCr7-nOGbXKaTV40oAyHvntonVbHFWQM0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2Q2L2Y2/LzdkL2Q2ZjY3ZDI2/NGEwNjI5NGJjYjhi/OTk4Y2M3OGMyZDQ0/LmpwZw" alt="Intricate bridal mehndi henna design" class="cursor-pointer rounded-lg shadow-md aspect-square object-cover w-full h-full transition-transform duration-300 hover:scale-105"></div>
+                <div class="gallery-item" data-category="hair"><img loading="lazy" src="https://imgs.search.brave.com/mo0Dy3Z8r3lnQVSc6-JoWkMz6pCmrA9RdwrjVkY_wm8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQw/NjAyMjUzMS9waG90/by9oYWlyZHJlc3Nl/ci1hcHBsaWVzLWNv/bG9yLXRvLWxvbmct/aGFpci1pbWFnZS1j/aGFuZ2UtY29uY2Vw/dC1oYWlyLWNhcmUt/cHJvZmVzc2lvbmFs/LWNvc21ldGljcy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/MTRQLW5VWGw0V0pX/dUwtN1ljZWk4SmZR/WWpNYVd3VWVHekE0/REZrYm0wYz0" alt="Woman receiving hair color treatment" class="cursor-pointer rounded-lg shadow-md aspect-square object-cover w-full h-full transition-transform duration-300 hover:scale-105"></div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="my-16">
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-center mb-10 text-brand-accent">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-brand-secondary-bg rounded-2xl shadow-lg p-8 text-center">
+                    <p class="text-brand-text/80 italic">"Absolutely wonderful experience! The facial was so relaxing and my skin has never felt better. Highly recommend!"</p>
+                    <p class="font-bold font-heading text-brand-text/70 mt-4">- Priya S.</p>
+                </div>
+                <div class="bg-brand-secondary-bg rounded-2xl shadow-lg p-8 text-center">
+                    <p class="text-brand-text/80 italic">"I got my bridal mehndi done here and it was stunning. The artists are so talented and professional. Thank you!"</p>
+                    <p class="font-bold font-heading text-brand-text/70 mt-4">- Anjali P.</p>
+                </div>
+                <div class="bg-brand-secondary-bg rounded-2xl shadow-lg p-8 text-center hidden md:block lg:block">
+                     <p class="text-brand-text/80 italic">"The best pedicure I've had. They are very friendly and the service is top-notch."</p>
+                    <p class="font-bold font-heading text-brand-text/70 mt-4">- Neha M.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-section" class="bg-brand-surface rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 my-16 text-center">
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4 text-brand-accent">Ready for a Pampering?</h2>
+            <p class="max-w-xl mx-auto text-brand-text/80 mb-8">Schedule your appointment with ease. Choose your service, pick a time, and let us take care of the rest. We can't wait to see you!</p>
+            <button onclick="openBookingModal()" class="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg rounded-lg shadow-md px-10 py-4 transition-transform duration-200 ease-in-out hover:scale-105">
+                Book Your Appointment Online
+            </button>
+        </section>
+
+    </main>
+    
+    <footer id="contact" class="text-center py-8 px-4 border-t border-brand-text/10">
+        <p class="font-bold">Beauty Salone & SPA</p>
+        <p class="text-brand-text/80">A,806, Kuber Heights, Opp. Rashi Icon,Navsari, Gujarat</p>
+        <p class="text-brand-text/60 mt-4 text-sm">© 2025 Beauty Salone & SPA. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/917405006053?text=Hello!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 bg-[#25D366] hover:bg-[#1EBE57] text-white rounded-full shadow-lg w-16 h-16 flex items-center justify-center transition-transform hover:scale-110 z-40">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 439.6c-33.8 0-66.3-8.8-94.3-25.7l-6.7-4-69.8 18.3L72 359.2l-4.5-7c-18.9-29.7-28.9-63.3-28.9-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+
+    <div id="service-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="bg-brand-bg rounded-lg shadow-2xl w-11/12 md:max-w-2xl mx-auto p-8 transform -translate-y-10 transition-transform duration-300">
+            <div class="flex justify-between items-center border-b border-brand-text/10 pb-4 mb-4">
+                <h3 id="service-modal-title" class="font-heading text-3xl text-brand-accent">Service Title</h3>
+                <button onclick="closeServiceModal()" class="text-brand-text/50 hover:text-brand-accent text-3xl">&times;</button>
+            </div>
+            <div id="service-modal-content">
+                </div>
+            <button onclick="openBookingModal()" class="mt-6 bg-brand-accent hover:bg-brand-accent-hover text-white font-bold rounded-lg px-6 py-3 transition-all">Book This Service</button>
+        </div>
     </div>
-    <!-- Right: Wax, Images, Info -->
-    <div class="w-full md:w-1/2 p-4 sm:p-6 md:p-10 flex flex-col gap-6 sm:gap-8 bg-gradient-to-b from-[#f7d9e3] to-[#fbeee6]">
-      <!-- Wax -->
-      <div class="bg-white/80 rounded-none sm:rounded-none shadow-sm border border-[#f3e6d6] p-3 sm:p-5 mb-2">
-        <h2 class="font-semibold text-base sm:text-lg text-[#c08e7b] mb-2 sm:mb-3 tracking-wide">Wax</h2>
-        <ul class="space-y-1 sm:space-y-2">
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Face Wax</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Full Hand</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Full Leg</span>
-          </li>
-          <li class="flex justify-between items-center italic text-[#7d5a4e] text-sm sm:text-base">
-            <span>Half Leg</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Bleach</span>
-          </li>
-          <li class="flex justify-between items-center text-[#7d5a4e] text-sm sm:text-base">
-            <span>Arms Bleach</span>
-          </li>
-          <li class="flex justify-between items-center italic text-[#7d5a4e] text-sm sm:text-base">
-            <span>Leg Bleach</span>
-          </li>
-        </ul>
-      </div>
-      <!-- Images -->
-      <div class="grid grid-cols-2 gap-2 sm:gap-4 rounded-none sm:rounded-none overflow-hidden shadow-sm border border-[#f3e6d6] bg-white/70 p-2 sm:p-3">
-        <img alt="Woman getting hair treatment in salon, side profile" class="rounded-lg sm:rounded-none shadow-sm object-cover aspect-square w-full h-auto max-h-28 sm:max-h-32" 
-          src="https://storage.googleapis.com/a1aa/image/aad7b438-e798-4311-5bcb-87c7237e654a.jpg" />
-        <img alt="Close up of hand with manicure nails, showing nail polish" class="rounded-lg sm:rounded-none shadow-sm object-cover aspect-square w-full h-auto max-h-28 sm:max-h-32" 
-          src="https://storage.googleapis.com/a1aa/image/a8af6205-7fdf-4759-dece-bd3ade2d40d0.jpg" />
-        <img alt="Woman with face mask wrapped in towel lying down" class="rounded-lg sm:rounded-none shadow-sm object-cover aspect-square w-full h-auto max-h-28 sm:max-h-32" 
-          src="https://storage.googleapis.com/a1aa/image/06f96ecd-3223-4f31-e1f2-056e0fa291d4.jpg" />
-        <img alt="Person getting leg massage in salon" class="rounded-lg sm:rounded-none shadow-sm object-cover aspect-square w-full h-auto max-h-28 sm:max-h-32" 
-          src="https://storage.googleapis.com/a1aa/image/72d379f4-fbd1-4fad-041f-0bedde122a5e.jpg" />
-      </div>
-      <!-- Info -->
-      <div class="mt-2 text-xs sm:text-sm text-[#7d5a4e] bg-white/80 rounded-none sm:rounded-none shadow-sm border border-[#f3e6d6] p-3 sm:p-5 max-w-full sm:max-w-xs mx-auto">
-        <p class="font-bold text-[#c08e7b] mb-2 tracking-wide text-sm sm:text-base">More Information</p>
-        <div class="space-y-0.5 sm:space-y-1 text-xs text-[#a67c52]">
-          <p>📅 Book Now on WhatsApp</p>
-            <p>Get service details, availability directly from us.</p>
-            <p>  No forms — just a quick chat!</p>
-            <p> 👇 Tap below to message us.</p>
-        </div>
-        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 mb-2 w-full justify-center">
-          
-          <!-- WhatsApp Button -->
-          
-          <a href="https://wa.me/917405006053?text=hello%2C%20i%20want%20to%20add%20appoinment%20for%20the%20beauty%20parlour" target="_blank" rel="noopener" class="tappable flex items-center justify-center bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold rounded-lg shadow px-4 py-2 transition-colors duration-200 w-full sm:w-auto text-base" style="min-width: 160px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 13.487a4.5 4.5 0 01-6.349-6.349m6.349 6.349l2.138 2.138m-2.138-2.138l-2.138-2.138" /></svg>
-            WhatsApp
-          </a>
-          
-          <!-- Location Button -->
-          <a href="https://maps.app.goo.gl/yqj9j9iDM9EQXwZd9" target="_blank" rel="noopener" class="tappable flex items-center justify-center bg-[#a67c52] hover:bg-[#c08e7b] text-white font-semibold rounded-lg shadow px-4 py-2 transition-colors duration-200 w-full sm:w-auto text-base mt-2 sm:mt-0" style="min-width: 160px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-4.556 0-8.25 3.694-8.25 8.25 0 5.25 8.25 11.25 8.25 11.25s8.25-6 8.25-11.25c0-4.556-3.694-8.25-8.25-8.25zm0 10.5a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" /></svg>
-            View Location
-          </a>
-        </div>
-        <div class="space-y-0.5 sm:space-y-1 text-xs text-[#a67c52]">
-          <p>A,806, Kuber Heights</p>
-          <p>Opp. Rashi Icon</p>
-          <p>Navsari</p>
-        </div>
-      </div>
+
+    <div id="booking-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+         <div class="bg-brand-bg rounded-lg shadow-2xl w-11/12 md:max-w-4xl h-3/4 mx-auto p-2 relative">
+             <button onclick="closeBookingModal()" class="absolute top-2 right-2 text-brand-text/50 hover:text-brand-accent z-10 bg-white rounded-full w-8 h-8 flex items-center justify-center text-2xl">&times;</button>
+             </div>
     </div>
-  </div>
-</body>
-</html>
+
+    <div id="lightbox-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 opacity-0 pointer-events-none">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl">&times;</button>
+        <img id="lightbox-image" src="" alt="Enlarged gallery view" class="max-w-[90vw] max-h-[80vh] rounded-lg">
+    </div>
+
+    <script>
+        // --- Service Data ---
+        const servicesData = {
+            facials: {
+                title: 'Facials & Skin Care',
+                content: `
+                    <p class="mb-4">Our signature facial treatments use premium, skin-friendly products to deliver outstanding results. We begin with a deep cleanse and gentle exfoliation to remove impurities, followed by a nourishing mask tailored to your skin type. The treatment concludes with a hydrating moisturizer and a light facial massage to boost circulation, leaving your skin feeling refreshed, radiant, and incredibly soft.</p>
+                    <h4 class="font-bold mb-2">Key Benefits:</h4>
+                    <ul class="list-disc list-inside text-brand-text/80 space-y-1">
+                        <li>Deeply cleanses pores and removes impurities</li>
+                        <li>Improves skin tone and texture</li>
+                        <li>Hydrates and nourishes for a healthy glow</li>
+                        <li>Reduces stress and promotes relaxation</li>
+                    </ul>
+                    <p class="font-bold mt-4">Duration: 60 minutes</p>
+                    <p class="font-bold">Price: Starts at ₹999</p>
+                `
+            },
+            waxing: {
+                title: 'Professional Waxing',
+                content: `
+                    <p class="mb-4">Experience smooth, long-lasting results with our professional waxing services. We use high-quality, gentle wax suitable for all skin types, minimizing discomfort and irritation. Our skilled technicians ensure a quick, efficient, and hygienic process, leaving your skin silky smooth.</p>
+                    <h4 class="font-bold mb-2">Key Benefits:</h4>
+                    <ul class="list-disc list-inside text-brand-text/80 space-y-1">
+                        <li>Long-lasting smoothness compared to shaving</li>
+                        <li>Hair grows back finer and softer over time</li>
+                        <li>Professional, hygienic, and quick service</li>
+                    </ul>
+                    <p class="font-bold mt-4">Duration: 15-45 minutes</p>
+                    <p class="font-bold">Price: Starts at ₹100</p>
+                `
+            }
+        };
+
+        // --- Modal Control Functions ---
+        const serviceModal = document.getElementById('service-modal');
+        const serviceModalTitle = document.getElementById('service-modal-title');
+        const serviceModalContent = document.getElementById('service-modal-content');
+        const bookingModal = document.getElementById('booking-modal');
+
+        function openServiceModal(serviceKey) {
+            const data = servicesData[serviceKey];
+            if (!data) return;
+
+            serviceModalTitle.textContent = data.title;
+            serviceModalContent.innerHTML = data.content;
+            
+            serviceModal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeServiceModal() {
+            serviceModal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.classList.remove('modal-active');
+        }
+
+        function openBookingModal() {
+            closeServiceModal(); 
+            
+            // ### THIS IS THE UPDATED LINE ###
+            const calendlyURL = "https://calendly.com/bhavinimistry1508/30min";
+            
+            Calendly.initInlineWidget({
+                url: calendlyURL,
+                parentElement: bookingModal.children[0],
+                prefill: {},
+                utm: {}
+            });
+            bookingModal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.classList.add('modal-active');
+        }
+        
+        function closeBookingModal() {
+            bookingModal.classList.add('opacity-0', 'pointer-events-none');
+            if (bookingModal.children[0].firstChild) {
+                bookingModal.children[0].innerHTML = ''; // Clear the Calendly embed to stop it running in the background
+            }
+            document.body.classList.remove('modal-active');
+        }
+        
+        // --- Gallery Filter and Lightbox Logic ---
+        const filterButtons = document.querySelectorAll('.gallery-filter-button');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImage = document.getElementById('lightbox-image');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            img.addEventListener('click', () => {
+                lightboxImage.src = img.src;
+                lightboxModal.classList.remove('opacity-0', 'pointer-events-none');
+                document.body.classList.add('modal-active');
+            });
+        });
+
+        function closeLightbox() {
+            lightboxModal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.classList.remove('modal-active');
+        }
+
+        // Close modals with Escape key or by clicking the background
+        document.addEventListener('keydown', (event) => {
+            if (event.key === "Escape") {
+                closeServiceModal();
+                closeBookingModal();
+                closeLightbox();
+            }
+        });
+
+        [serviceModal, bookingModal, lightboxModal].forEach(modal => {
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeServiceModal();
+                    closeBookingModal();
+                    closeLightbox();
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
